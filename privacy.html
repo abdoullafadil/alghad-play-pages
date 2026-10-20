@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<title>سياسة الخصوصية – مدرسة الغد الأهلية (كركوك)</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="wrap">
+
+  <header class="site ar">
+    <h1>سياسة الخصوصية</h1>
+    <p>مدرسة الغد الأهلية – كركوك، جمهورية العراق</p>
+    <nav class="site">
+      <a href="index.html">الرئيسية</a>
+      <a href="data-deletion.html">طلب حذف الحساب والبيانات</a>
+      <a href="privacy.html#en">English</a>
+    </nav>
+  </header>
+
+  <!-- ===================== ARABIC ===================== -->
+  <main class="card ar">
+    <p class="doc-title">سياسة الخصوصية – تطبيقات مدرسة الغد الأهلية (كركوك)</p>
+    <p class="meta">
+      <strong>آخر تحديث:</strong> 2026-10-20<br>
+      <strong>الجهة المسؤولة عن البيانات (متحكّم البيانات):</strong> مدرسة الغد الأهلية – كركوك، جمهورية العراق.
+    </p>
+    <div class="contact">
+      <strong>التواصل:</strong><br>
+      البريد الإلكتروني: <a href="mailto:[[OFFICIAL_EMAIL]]">[[OFFICIAL_EMAIL]]</a><br>
+      الهاتف: <span dir="ltr">[[OFFICIAL_PHONE]]</span>
+    </div>
+
+    <h2>1. نطاق هذه السياسة</h2>
+    <p>تسري هذه السياسة على التطبيقات الثلاثة التالية، وهي تطبيقات داخلية لمدرسة الغد الأهلية – كركوك ومخصّصة للاستخدام من قِبل الطلاب وأولياء أمورهم والكادر الإداري والتعليمي في المدرسة فقط:</p>
+    <table>
+      <thead><tr><th>التطبيق</th><th>معرّف الحزمة (<code>applicationId</code>)</th><th>المستخدمون المستهدفون</th></tr></thead>
+      <tbody>
+        <tr><td><strong>الغد كركوك</strong></td><td><code>com.alghad.alghad_kirkuk</code></td><td>الطالب / ولي الأمر</td></tr>
+        <tr><td><strong>الغد الإداري</strong></td><td><code>com.alghad.kirkuk.alghad_admin</code></td><td>الكادر الإداري (بصلاحيات محددة من المالك)</td></tr>
+        <tr><td><strong>معلمات الغد</strong></td><td><code>com.alghad.kirkuk.alghad_teachers</code></td><td>المعلمات</td></tr>
+      </tbody>
+    </table>
+    <p>باستخدامك أيًّا من هذه التطبيقات فإنك تقرّ بأنك اطّلعت على هذه السياسة.</p>
+
+    <h2>2. مبدأ عام: لا تسجيل ذاتي</h2>
+    <p><strong>لا تتيح أي من التطبيقات الثلاثة إنشاء حساب من داخل التطبيق.</strong> جميع الحسابات تُنشأ مسبقًا من قِبل إدارة المدرسة عبر نظام المدرسة المركزي، وتُسلَّم بيانات الدخول للشخص المعني. لا يوجد نموذج تسجيل (Sign-up) ولا إنشاء حساب بواسطة المستخدم.</p>
+
+    <h2>3. البيانات التي نعالجها</h2>
+
+    <h3>3.1 بيانات مشتركة بين التطبيقات الثلاثة</h3>
+    <table>
+      <thead><tr><th>نوع البيانات</th><th>الغرض</th><th>إلزامية؟</th></tr></thead>
+      <tbody>
+        <tr><td><strong>البريد الإلكتروني</strong> للحساب</td><td>تسجيل الدخول وإدارة الحساب (عبر Firebase Authentication)</td><td>إلزامية</td></tr>
+        <tr><td><strong>معرّف المستخدم (UID)</strong></td><td>ربط الجلسة بحساب المستخدم والتحكم في الصلاحيات</td><td>إلزامية</td></tr>
+        <tr><td><strong>كلمة المرور</strong></td><td>تُرسَل مباشرة إلى خدمة Firebase Authentication للتحقق. <strong>لا نحتفظ بها كنص صريح ولا نخزّنها داخل التطبيقات أو قواعد بيانات المدرسة.</strong></td><td>إلزامية</td></tr>
+      </tbody>
+    </table>
+
+    <h3>3.2 البيانات عند استخدام كل تطبيق</h3>
+    <p><strong>أ) تطبيق «الغد كركوك» (الطالب/ولي الأمر)</strong> — يتصل بخادم المدرسة عبر اتصال مشفّر، ولا يصل إلى قاعدة البيانات مباشرة:</p>
+    <table>
+      <thead><tr><th>البيانات</th><th>الاتجاه</th><th>الغرض</th></tr></thead>
+      <tbody>
+        <tr><td>البريد الإلكتروني وكلمة المرور</td><td>يُرسَل إلى Firebase Authentication</td><td>تسجيل الدخول</td></tr>
+        <tr><td>رمز جهاز الإشعارات (FCM Token)</td><td>يُرسَل إلى خادم المدرسة</td><td>إرسال إشعارات المدرسة (واجبات، إعلانات، مفكرة، حضور، درجات)</td></tr>
+        <tr><td>محتوى طلب الإجازة: النوع، تاريخ البداية، تاريخ النهاية، سبب الإجازة</td><td>يُرسَل إلى خادم المدرسة</td><td>تقديم طلب إجازة ومراجعته من الإدارة</td></tr>
+        <tr><td>حالة قراءة الإشعارات</td><td>يُرسَل إلى خادم المدرسة</td><td>تمييز الإشعارات المقروءة</td></tr>
+        <tr><td>البيانات الأكاديمية المعروضة (الاسم، الصف/الشعبة، الرقم الدراسي، سجل الحضور، المفكرة اليومية، الدرجات، الإشعارات)</td><td>تُستلَم من خادم المدرسة للعرض فقط</td><td>تمكين الطالب/ولي الأمر من متابعة الوضع الدراسي</td></tr>
+      </tbody>
+    </table>
+    <div class="note">
+      <strong>ملاحظة مهمة:</strong> بيانات الطالب الأكاديمية والبيانات الطبية المخزَّنة في نظام المدرسة (فصيلة الدم، الحساسية، ملاحظات طبية) إن وُجدت، تُدار أصلًا في سجلات المدرسة الرسمية ولا يتم إدخالها من داخل التطبيق، ويُعرض منها ما يخصّ الحساب المرتبط به فقط.
+    </div>
+
+    <p><strong>ب) تطبيق «الغد الإداري» (الجهة الإدارية)</strong>:</p>
+    <table>
+      <thead><tr><th>البيانات</th><th>الاتجاه</th><th>الغرض</th></tr></thead>
+      <tbody>
+        <tr><td>البريد الإلكتروني وكلمة المرور</td><td>يُرسَل إلى Firebase Authentication</td><td>تسجيل الدخول</td></tr>
+        <tr><td>وثيقة صلاحيات الإداري (<code>admins/{uid}</code>) وقائمة الطلاب المرجعية</td><td>قراءة مباشرة محمية بقواعد الوصول</td><td>تحديد الصلاحيات ومزامنة الأعداد</td></tr>
+        <tr><td>محتوى المفكرة اليومية (النصوص المُدخلة)</td><td>يُرسَل إلى خادم المدرسة</td><td>إنشاء/تحديث ونشر المفكرة اليومية</td></tr>
+        <tr><td>جلسات الحضور (حالة كل طالب: حاضر/غائب)</td><td>يُرسَل إلى خادم المدرسة</td><td>تسجيل الحضور وإشعار أولياء الأمور</td></tr>
+        <tr><td>قرارات طلبات الإجازة</td><td>يُرسَل إلى خادم المدرسة</td><td>مراجعة طلبات الإجازة</td></tr>
+        <tr><td>صور سجل السائقين (صورة السائق/المركبة)</td><td><strong>محلية على الجهاز فقط</strong></td><td>سجل داخلي؛ <strong>لا تُرفع إلى أي خادم</strong></td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>ج) تطبيق «معلمات الغد»</strong> — لا يتصل بخادم المدرسة، ولا يستخدم قاعدة بيانات سحابية:</p>
+    <table>
+      <thead><tr><th>البيانات</th><th>الاتجاه</th><th>الغرض</th></tr></thead>
+      <tbody>
+        <tr><td>البريد الإلكتروني وكلمة المرور</td><td>يُرسَل إلى Firebase Authentication</td><td>تسجيل الدخول فقط</td></tr>
+        <tr><td>الخطط والجدول والرسائل والملاحظات والصور الشخصية</td><td><strong>تُخزَّن محليًا على جهاز المستخدم فقط</strong></td><td>تشغيل وظائف التطبيق</td></tr>
+      </tbody>
+    </table>
+
+    <h2>4. أذونات الجهاز</h2>
+    <table>
+      <thead><tr><th>الإذن</th><th>التطبيق</th><th>الغرض الفعلي</th></tr></thead>
+      <tbody>
+        <tr><td><code>POST_NOTIFICATIONS</code></td><td>«الغد كركوك» و«معلمات الغد»</td><td>عرض إشعارات المدرسة</td></tr>
+        <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>«معلمات الغد»</td><td>جدولة تذكيرات الخطط في وقتها المحدد (يمكن للمستخدم منعها من إعدادات النظام دون تعطيل التطبيق)</td></tr>
+        <tr><td>اختيار الصور من المعرض</td><td>«الغد الإداري»، «معلمات الغد»</td><td>اختيار صورة باختيار المستخدم الصريح، ومعالجتها محليًا</td></tr>
+      </tbody>
+    </table>
+    <p>لا نطلب أي إذن للوصول إلى الموقع الجغرافي، أو جهات الاتصال، أو الرسائل، أو ملفات الجهاز العامة.</p>
+
+    <h2>5. مَن يعالج البيانات (مقدّمو الخدمة)</h2>
+    <p>نستعين بمقدّمي خدمات تقنيين لمعالجة البيانات <strong>نيابةً عن المدرسة ولأغراض تشغيل الخدمة فقط</strong>، دون بيعها أو استخدامها لأغراض إعلانية:</p>
+    <table>
+      <thead><tr><th>المزوّد</th><th>الدور</th><th>البيانات</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Google Firebase</strong> (Authentication / Cloud Firestore / Cloud Messaging)</td><td>المصادقة، قاعدة بيانات المدرسة، إشعارات المنصة</td><td>الحساب، السجل الدراسي والإداري، رمز الإشعارات</td></tr>
+        <tr><td><strong>Render</strong></td><td>استضافة خادم المدرسة (<span dir="ltr">https://alghad-central-backend.onrender.com</span>)</td><td>الطلبات والبيانات المرسلة من التطبيقات</td></tr>
+        <tr><td><strong>Cloudflare R2</strong></td><td>تخزين صور الملف الشخصي والوسائط المدرسية</td><td>الصور فقط عند وجودها</td></tr>
+      </tbody>
+    </table>
+    <p>قد تُعالَج البيانات على خوادم خارج العراق لدى هؤلاء المزوّدين بحسب بنيتهم السحابية.</p>
+
+    <h2>6. لا إعلانات ولا تتبّع ولا بيع بيانات</h2>
+    <ul>
+      <li>لا تحتوي التطبيقات الثلاثة على أي شبكة إعلانات.</li>
+      <li>لا نستخدم أدوات تحليلات (Analytics) أو تتبّع إعلاني، ولا أدوات تقارير أعطال (Crashlytics) أو قياس أداء.</li>
+      <li><strong>لا نبيع البيانات الشخصية ولا نشاركها مع أي طرف ثالث لأغراض تجارية أو تسويقية.</strong></li>
+    </ul>
+
+    <h2>7. بيانات الأطفال</h2>
+    <p>التطبيقات مخصّصة لبيئة تعليمية، وقد تُستخدم حسابات طلاب. ولأن الحسابات تُنشأ من قِبل المدرسة حصريًا ولا يوجد تسجيل ذاتي، فإن المدرسة هي الجهة التي تُدير هذه الحسابات وتحصل على موافقة ولي الأمر وفق أنظمتها الداخلية. لا نجمع بيانات من الأطفال لأغراض تسويقية أو تحليلية إطلاقًا.</p>
+
+    <h2>8. أمن البيانات</h2>
+    <ul>
+      <li>جميع الاتصالات تتم عبر <strong>HTTPS/TLS</strong> (لا يوجد أي اتصال غير مشفّر في التطبيقات).</li>
+      <li>الوصول إلى البيانات محكوم بقواعد أمنية في قاعدة البيانات وبصلاحيات دورية (دور الطالب/الإداري/المعلمة)، وتُنفَّذ العمليات الإدارية الحسّاسة من جهة الخادم حصريًا.</li>
+      <li>لا تُخزَّن كلمات المرور داخل التطبيقات ولا في سجلاتها.</li>
+      <li>الوصول إلى صور الملف الشخصي (إن وُجدت) يتم عبر روابط موقّعة قصيرة الأجل، لا روابط عامة دائمة.</li>
+    </ul>
+
+    <h2>9. مدة الاحتفاظ</h2>
+    <p>نحتفظ بالبيانات للمدة اللازمة لتشغيل الخدمة التعليمية والإدارية، وبما يتماشى مع سجلات المدرسة الرسمية ومتطلبات الجهات التربوية. عند انتهاء العلاقة الدراسية أو الوظيفية يُتخذ إجراء الإيقاف/الحذف بحسب سياسة المدرسة.</p>
+    <p>عند تنفيذ طلب حذف حساب الطالب — بعد التحقق من صفة مقدّم الطلب — تُحذف <strong>جميع</strong> البيانات المرتبطة بالطالب نهائيًا، دون الاحتفاظ بأي سجلات شخصية أو نسخ مجهولة الهوية من بياناته، وتشمل:</p>
+    <ul>
+      <li>بيانات تسجيل الدخول (حساب المصادقة)،</li>
+      <li>الملف الشخصي ومرجع صورة الحساب وكافة ملفاتها المخزَّنة،</li>
+      <li>طلبات الإجازة المرتبطة به،</li>
+      <li>إشعاراته ورموز أجهزته (FCM)،</li>
+      <li>بيانات الطالب داخل سجلات الحضور: يُزال <strong>صف الطالب فقط</strong> من الجلسات المشتركة، مع إعادة احتساب العدّادات، دون المساس ببيانات بقية الطلاب.</li>
+    </ul>
+    <p>تبقى فقط السجلات المشتركة <strong>غير الشخصية</strong> الخاصة بالصف/الشعبة (مثل المفكرة اليومية للصف)، لأنها لا تُعرّف بأي طالب بعينه. خطوات طلب الحذف موضّحة في صفحة «طلب حذف الحساب والبيانات»: <a href="data-deletion.html">اضغط هنا</a>.</p>
+
+    <h2>10. حقوقك</h2>
+    <p>يمكنك — أو يمكن لوليّ أمرك إن كنت طالبًا — طلب:</p>
+    <ul>
+      <li><strong>الاطلاع</strong> على البيانات المرتبطة بحسابك،</li>
+      <li><strong>تصحيح</strong> أي بيانات غير دقيقة،</li>
+      <li><strong>حذف</strong> الحساب والبيانات المرتبطة به،</li>
+      <li><strong>سحب</strong> الإذن بالحصول على إشعارات (من إعدادات النظام).</li>
+    </ul>
+    <p>تُقدَّم هذه الطلبات عبر التواصل مع إدارة المدرسة على بيانات الاتصال المذكورة في أعلى هذه السياسة، أو عبر صفحة «طلب حذف الحساب والبيانات»: <a href="data-deletion.html">اضغط هنا</a>.</p>
+
+    <h2>11. التغييرات على هذه السياسة</h2>
+    <p>قد نحدّث هذه السياسة عند إضافة وظائف جديدة أو تغيّر الخدمات المستخدمة، وسيُشار إلى تاريخ آخر تحديث في أعلى المستند.</p>
+
+    <h2>12. التواصل</h2>
+    <div class="contact">
+      <strong>مدرسة الغد الأهلية – كركوك</strong><br>
+      البريد الإلكتروني: <a href="mailto:[[OFFICIAL_EMAIL]]">[[OFFICIAL_EMAIL]]</a><br>
+      الهاتف: <span dir="ltr">[[OFFICIAL_PHONE]]</span>
+    </div>
+  </main>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <section class="card en" id="en" style="margin-top:20px">
+    <p class="doc-title">Privacy Policy — Alghad Private School (Kirkuk) Applications</p>
+    <p class="meta">
+      <strong>Last updated:</strong> 2026-10-20<br>
+      <strong>Data controller:</strong> Alghad Private School — Kirkuk, Republic of Iraq.
+    </p>
+    <div class="contact">
+      <strong>Contact:</strong><br>
+      Email: <a href="mailto:[[OFFICIAL_EMAIL]]">[[OFFICIAL_EMAIL]]</a><br>
+      Phone: <span dir="ltr">[[OFFICIAL_PHONE]]</span>
+    </div>
+
+    <h2>1. Scope</h2>
+    <p>This policy applies to the following three applications. They are internal applications of Alghad Private School — Kirkuk, intended for use only by the school's students, their parents/guardians, and the school's administrative and teaching staff:</p>
+    <table>
+      <thead><tr><th>Application</th><th>Package ID (<code>applicationId</code>)</th><th>Intended users</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Alghad Kirkuk</strong></td><td><code>com.alghad.alghad_kirkuk</code></td><td>Student / guardian</td></tr>
+        <tr><td><strong>Alghad Admin</strong></td><td><code>com.alghad.kirkuk.alghad_admin</code></td><td>Administrative staff (with permissions granted by the owner)</td></tr>
+        <tr><td><strong>Alghad Teachers</strong></td><td><code>com.alghad.kirkuk.alghad_teachers</code></td><td>Teachers</td></tr>
+      </tbody>
+    </table>
+    <p>By using any of these applications, you confirm that you have reviewed this policy.</p>
+
+    <h2>2. General principle: no self sign-up</h2>
+    <p><strong>None of the three applications allows creating an account from within the app.</strong> All accounts are created in advance by the school administration through the school's central system, and the login credentials are handed to the relevant person. There is no sign-up form and no user-created accounts.</p>
+
+    <h2>3. Data we process</h2>
+
+    <h3>3.1 Data common to the three applications</h3>
+    <table>
+      <thead><tr><th>Data type</th><th>Purpose</th><th>Required?</th></tr></thead>
+      <tbody>
+        <tr><td>Account <strong>email address</strong></td><td>Sign-in and account management (via Firebase Authentication)</td><td>Required</td></tr>
+        <tr><td><strong>User identifier (UID)</strong></td><td>Linking the session to the user account and enforcing permissions</td><td>Required</td></tr>
+        <tr><td><strong>Password</strong></td><td>Sent directly to Firebase Authentication for verification. <strong>We do not retain it in plain text and do not store it in the applications or the school's databases.</strong></td><td>Required</td></tr>
+      </tbody>
+    </table>
+
+    <h3>3.2 Data per application</h3>
+    <p><strong>a) "Alghad Kirkuk" (student/guardian)</strong> — connects to the school server over an encrypted connection and does not access the database directly:</p>
+    <table>
+      <thead><tr><th>Data</th><th>Direction</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Email and password</td><td>Sent to Firebase Authentication</td><td>Sign-in</td></tr>
+        <tr><td>Notification device token (FCM token)</td><td>Sent to the school server</td><td>Delivering school notifications (assignments, announcements, diary, attendance, grades)</td></tr>
+        <tr><td>Leave-request content: type, start date, end date, reason</td><td>Sent to the school server</td><td>Submitting a leave request for administration review</td></tr>
+        <tr><td>Notification read status</td><td>Sent to the school server</td><td>Marking notifications as read</td></tr>
+        <tr><td>Displayed academic data (name, class/section, student number, attendance record, daily diary, grades, notifications)</td><td>Received from the school server for display only</td><td>Enabling the student/guardian to follow academic progress</td></tr>
+      </tbody>
+    </table>
+    <div class="note">
+      <strong>Important note:</strong> Student academic data and medical data stored in the school system (blood type, allergies, medical notes), if any, are maintained in the school's official records and are not entered from within the application; only the data related to the linked account is displayed.
+    </div>
+
+    <p><strong>b) "Alghad Admin" (administrative side)</strong>:</p>
+    <table>
+      <thead><tr><th>Data</th><th>Direction</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Email and password</td><td>Sent to Firebase Authentication</td><td>Sign-in</td></tr>
+        <tr><td>Administrator permission document (<code>admins/{uid}</code>) and the student reference list</td><td>Direct read protected by access rules</td><td>Determining permissions and synchronizing counts</td></tr>
+        <tr><td>Daily diary content (entered text)</td><td>Sent to the school server</td><td>Creating/updating and publishing the daily diary</td></tr>
+        <tr><td>Attendance sessions (each student's status: present/absent)</td><td>Sent to the school server</td><td>Recording attendance and notifying guardians</td></tr>
+        <tr><td>Leave-request decisions</td><td>Sent to the school server</td><td>Reviewing leave requests</td></tr>
+        <tr><td>Driver registry images (driver/vehicle photo)</td><td><strong>Local to the device only</strong></td><td>Internal registry; <strong>not uploaded to any server</strong></td></tr>
+      </tbody>
+    </table>
+
+    <p><strong>c) "Alghad Teachers"</strong> — does not connect to the school server and does not use a cloud database:</p>
+    <table>
+      <thead><tr><th>Data</th><th>Direction</th><th>Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Email and password</td><td>Sent to Firebase Authentication</td><td>Sign-in only</td></tr>
+        <tr><td>Plans, schedule, messages, notes, and personal images</td><td><strong>Stored locally on the user's device only</strong></td><td>Operating the application's features</td></tr>
+      </tbody>
+    </table>
+
+    <h2>4. Device permissions</h2>
+    <table>
+      <thead><tr><th>Permission</th><th>Application</th><th>Actual purpose</th></tr></thead>
+      <tbody>
+        <tr><td><code>POST_NOTIFICATIONS</code></td><td>"Alghad Kirkuk" and "Alghad Teachers"</td><td>Displaying school notifications</td></tr>
+        <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>"Alghad Teachers"</td><td>Scheduling plan reminders at their specified time (the user may disable it from system settings without disabling the app)</td></tr>
+        <tr><td>Selecting images from the gallery</td><td>"Alghad Admin", "Alghad Teachers"</td><td>Selecting an image with the user's explicit choice, processed locally</td></tr>
+      </tbody>
+    </table>
+    <p>We do not request any permission to access location, contacts, messages, or general device files.</p>
+
+    <h2>5. Who processes the data (service providers)</h2>
+    <p>We use technical service providers to process data <strong>on the school's behalf and only for operating the service</strong>, without selling it or using it for advertising:</p>
+    <table>
+      <thead><tr><th>Provider</th><th>Role</th><th>Data</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Google Firebase</strong> (Authentication / Cloud Firestore / Cloud Messaging)</td><td>Authentication, the school's database, platform notifications</td><td>Account, academic and administrative record, notification token</td></tr>
+        <tr><td><strong>Render</strong></td><td>Hosting the school server (<span dir="ltr">https://alghad-central-backend.onrender.com</span>)</td><td>Requests and data sent from the applications</td></tr>
+        <tr><td><strong>Cloudflare R2</strong></td><td>Storing profile images and school media</td><td>Images only, where present</td></tr>
+      </tbody>
+    </table>
+    <p>Data may be processed on servers outside Iraq by these providers according to their cloud architecture.</p>
+
+    <h2>6. No ads, no tracking, no data selling</h2>
+    <ul>
+      <li>The three applications contain no advertising network.</li>
+      <li>We do not use analytics or advertising tracking tools, nor crash-reporting (Crashlytics) or performance-measurement tools.</li>
+      <li><strong>We do not sell personal data or share it with any third party for commercial or marketing purposes.</strong></li>
+    </ul>
+
+    <h2>7. Children's data</h2>
+    <p>The applications serve an educational environment and student accounts may be used. Because accounts are created exclusively by the school and there is no self sign-up, the school is the entity that manages these accounts and obtains guardian consent in accordance with its internal regulations. We do not collect children's data for marketing or analytical purposes whatsoever.</p>
+
+    <h2>8. Data security</h2>
+    <ul>
+      <li>All connections use <strong>HTTPS/TLS</strong> (there is no unencrypted connection in the applications).</li>
+      <li>Data access is governed by database security rules and role-based permissions (student/admin/teacher roles), and sensitive administrative operations are performed exclusively server-side.</li>
+      <li>Passwords are not stored within the applications or their logs.</li>
+      <li>Access to profile images (where present) is via short-lived signed URLs, not permanent public links.</li>
+    </ul>
+
+    <h2>9. Retention period</h2>
+    <p>We retain data for the period necessary to operate the educational and administrative service, in line with the school's official records and the requirements of educational authorities. When the academic or employment relationship ends, suspension/deletion is carried out according to school policy.</p>
+    <p>Upon executing a student account deletion request — after verifying the requester's capacity — <strong>all</strong> data related to the student is permanently deleted, with no personal records or anonymized copies retained, including:</p>
+    <ul>
+      <li>login data (the authentication account),</li>
+      <li>the profile and the account image reference and all its stored files,</li>
+      <li>leave requests related to the student,</li>
+      <li>their notifications and device tokens (FCM),</li>
+      <li>the student's data within attendance records: only the <strong>student's own row</strong> is removed from shared sessions, with counters recalculated, without affecting other students' data.</li>
+    </ul>
+    <p>Only the <strong>non-personal</strong> shared class/section records remain (such as the class daily diary), because they do not identify any individual student. The deletion request steps are described on the "Account &amp; Data Deletion Request" page: <a href="data-deletion.html#en">click here</a>.</p>
+
+    <h2>10. Your rights</h2>
+    <p>You — or your guardian if you are a student — may request:</p>
+    <ul>
+      <li><strong>Access</strong> to the data related to your account,</li>
+      <li><strong>Correction</strong> of any inaccurate data,</li>
+      <li><strong>Deletion</strong> of the account and related data,</li>
+      <li><strong>Withdrawal</strong> of consent to receive notifications (from system settings).</li>
+    </ul>
+    <p>These requests are made by contacting the school administration using the contact details at the top of this policy, or via the "Account &amp; Data Deletion Request" page: <a href="data-deletion.html#en">click here</a>.</p>
+
+    <h2>11. Changes to this policy</h2>
+    <p>We may update this policy when new features are added or the services used change; the last-updated date will be indicated at the top of the document.</p>
+
+    <h2>12. Contact</h2>
+    <div class="contact">
+      <strong>Alghad Private School — Kirkuk</strong><br>
+      Email: <a href="mailto:[[OFFICIAL_EMAIL]]">[[OFFICIAL_EMAIL]]</a><br>
+      Phone: <span dir="ltr">[[OFFICIAL_PHONE]]</span>
+    </div>
+  </section>
+
+  <footer class="site">
+    مدرسة الغد الأهلية – كركوك، جمهورية العراق
+  </footer>
+
+</div>
+</body>
+</html>

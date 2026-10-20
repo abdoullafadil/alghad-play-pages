@@ -1,0 +1,192 @@
+/* ALGHAD School — static policy pages
+   Self-contained stylesheet (no external assets, no fonts, no trackers). */
+
+:root {
+  --bg: #f4f6f9;
+  --card: #ffffff;
+  --ink: #1f2937;
+  --muted: #5b6472;
+  --line: #e3e7ee;
+  --brand: #14532d;
+  --brand-soft: #e8f1ea;
+  --accent: #b8860b;
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  padding: 24px 16px 64px;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", Tahoma, "Noto Naskh Arabic", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.wrap { max-width: 880px; margin: 0 auto; }
+
+header.site {
+  background: var(--brand);
+  color: #fff;
+  border-radius: 14px;
+  padding: 26px 24px;
+  margin-bottom: 20px;
+}
+
+header.site h1 {
+  margin: 0 0 6px;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+header.site p {
+  margin: 0;
+  font-size: 14px;
+  opacity: .9;
+}
+
+nav.site {
+  margin-top: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav.site a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid rgba(255, 255, 255, .55);
+  border-radius: 999px;
+  padding: 4px 14px;
+}
+
+nav.site a:hover { background: rgba(255, 255, 255, .15); }
+
+main.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 28px 26px;
+}
+
+section.doc + section.doc {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 2px dashed var(--line);
+}
+
+h2 { font-size: 20px; margin: 28px 0 10px; }
+h3 { font-size: 17px; margin: 22px 0 8px; }
+h2:first-child, h3:first-child { margin-top: 0; }
+
+p, li { color: var(--ink); }
+
+ul, ol { padding-inline-start: 22px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 14px 0 18px;
+  font-size: 15px;
+}
+
+th, td {
+  border: 1px solid var(--line);
+  padding: 9px 11px;
+  text-align: start;
+  vertical-align: top;
+}
+
+th { background: var(--brand-soft); font-weight: 600; }
+
+.note {
+  background: #fff8e6;
+  border: 1px solid #f0dca6;
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin: 14px 0;
+  font-size: 15px;
+}
+
+.contact {
+  background: var(--brand-soft);
+  border: 1px solid #cfe3d4;
+  border-radius: 10px;
+  padding: 14px 16px;
+  margin: 14px 0;
+}
+
+.meta { color: var(--muted); font-size: 14px; }
+
+.pill {
+  display: inline-block;
+  background: var(--brand-soft);
+  color: var(--brand);
+  border-radius: 999px;
+  padding: 2px 12px;
+  font-size: 13px;
+  margin-inline-end: 6px;
+}
+
+/* language direction */
+.ar { direction: rtl; text-align: right; }
+.en { direction: ltr; text-align: left; }
+
+.doc-title {
+  font-size: 19px;
+  font-weight: 700;
+  color: var(--brand);
+  margin: 0 0 6px;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.tile {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 18px;
+  transition: border-color .15s, transform .15s;
+}
+
+.tile:hover { border-color: var(--brand); transform: translateY(-2px); }
+
+.tile strong { display: block; color: var(--brand); font-size: 17px; margin-bottom: 6px; }
+.tile span { color: var(--muted); font-size: 14px; }
+
+footer.site {
+  margin-top: 24px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+code {
+  background: #f1f3f7;
+  border-radius: 4px;
+  padding: 1px 6px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 14px;
+  direction: ltr;
+  display: inline-block;
+}
+
+@media print {
+  body { background: #fff; padding: 0; }
+  nav.site { display: none; }
+  main.card { border: 0; padding: 0; }
+  header.site { background: #fff; color: #000; border-bottom: 2px solid #000; border-radius: 0; }
+  header.site a { color: #000; }
+}
