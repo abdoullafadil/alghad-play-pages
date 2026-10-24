@@ -6,6 +6,30 @@
 <meta name="robots" content="index, follow">
 <title>سياسة الخصوصية – مدرسة الغد الأهلية (كركوك)</title>
 <link rel="stylesheet" href="styles.css">
+<!--
+  سياسة الخصوصية — نسخة v2 (عربي + إنجليزي) — 2026-10-24
+  التغيير الجوهري: تصحيح وصف تطبيق «معلمات الغد» (تسجيل الدخول عبر Firebase Authentication
+  + التحقق من صلاحية المعلمة عبر خادم المدرسة GET /teacher/me).
+  النسخة المنشورة على المسار العام /privacy.html — 2026-10-24.
+-->
+<style>
+  /* تحسينات عرض الهواتف — خاص بهذا الملف فقط؛ styles.css المشترك لم يُعدَّل */
+  .table-wrap { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .table-wrap table { margin: 14px 0 18px; }
+  a, code { overflow-wrap: anywhere; }
+  @media (max-width: 640px) {
+    body { padding: 14px 10px 44px; font-size: 15px; line-height: 1.85; }
+    header.site { padding: 20px 16px; border-radius: 12px; }
+    header.site h1 { font-size: 19px; }
+    main.card, section.card { padding: 18px 14px; border-radius: 12px; }
+    h2 { font-size: 18px; margin: 22px 0 8px; }
+    h3 { font-size: 16px; }
+    .table-wrap table { font-size: 13.5px; min-width: 520px; }
+    th, td { padding: 7px 8px; }
+    .note, .contact { font-size: 14px; padding: 11px 12px; }
+    nav.site a { font-size: 13px; padding: 5px 12px; }
+  }
+</style>
 </head>
 <body>
 <div class="wrap">
@@ -16,15 +40,16 @@
     <nav class="site">
       <a href="index.html">الرئيسية</a>
       <a href="data-deletion.html">طلب حذف الحساب والبيانات</a>
-      <a href="privacy.html#en">English</a>
+      <a href="#ar">العربية</a>
+      <a href="#en">English</a>
     </nav>
   </header>
 
   <!-- ===================== ARABIC ===================== -->
-  <main class="card ar">
+  <main class="card ar" id="ar">
     <p class="doc-title">سياسة الخصوصية – تطبيقات مدرسة الغد الأهلية (كركوك)</p>
     <p class="meta">
-      <strong>آخر تحديث:</strong> 2026-10-20<br>
+      <strong>آخر تحديث:</strong> 2026-10-24<br>
       <strong>الجهة المسؤولة عن البيانات (متحكّم البيانات):</strong> مدرسة الغد الأهلية – كركوك، جمهورية العراق.
     </p>
     <div class="contact">
@@ -35,6 +60,7 @@
 
     <h2>1. نطاق هذه السياسة</h2>
     <p>تسري هذه السياسة على التطبيقات الثلاثة التالية، وهي تطبيقات داخلية لمدرسة الغد الأهلية – كركوك ومخصّصة للاستخدام من قِبل الطلاب وأولياء أمورهم والكادر الإداري والتعليمي في المدرسة فقط:</p>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>التطبيق</th><th>معرّف الحزمة (<code>applicationId</code>)</th><th>المستخدمون المستهدفون</th></tr></thead>
       <tbody>
@@ -43,15 +69,17 @@
         <tr><td><strong>معلمات الغد</strong></td><td><code>com.alghad.kirkuk.alghad_teachers</code></td><td>المعلمات</td></tr>
       </tbody>
     </table>
+    </div>
     <p>باستخدامك أيًّا من هذه التطبيقات فإنك تقرّ بأنك اطّلعت على هذه السياسة.</p>
 
     <h2>2. مبدأ عام: لا تسجيل ذاتي ولا حذف ذاتي</h2>
-    <p><strong>لا تتيح أي من التطبيقات الثلاثة إنشاء حساب من داخل التطبيق.</strong> جميع الحسابات تُنشأ مسبقًا من قِبل إدارة المدرسة عبر نظام المدرسة المركزي <strong>ALGHAD-CENTRAL</strong> بواسطة المالك المخوّل حصريًا، وتُسلَّم بيانات الدخول للشخص المعني. لا يوجد نموذج تسجيل (Sign-up) ولا إنشاء حساب بواسطة المستخدم.</p>
-    <p><strong>كما لا تتضمن تطبيقات الطالب أو الإداري أو المعلمات أي صلاحية لإنشاء الحسابات أو حذفها.</strong> إنشاء حسابات الطلاب وحذفها يُنفَّذان حصريًا من تطبيق <strong>ALGHAD-CENTRAL</strong> بواسطة المالك المخوّل، ولا يوجد أي زر أو إجراء لحذف الحساب داخل التطبيقات الثلاثة. خطوات طلب الحذف موضّحة في <a href="data-deletion.html">صفحة «طلب حذف الحساب والبيانات»</a>.</p>
+    <p><strong>لا تتيح أي من التطبيقات الثلاثة إنشاء حساب من داخل التطبيق.</strong> تُنشأ الحسابات مسبقًا من قِبل إدارة المدرسة عبر نظام المدرسة المركزي <strong>ALGHAD-CENTRAL</strong> بواسطة المالك المخوّل، وتُسلَّم بيانات الدخول للشخص المعني. لا يوجد نموذج تسجيل (Sign-up) ولا إنشاء حساب بواسطة المستخدم.</p>
+    <p><strong>كما لا تتضمن تطبيقات الطالب أو الإداري أو المعلمات أي صلاحية لإنشاء الحسابات أو حذفها، ولا يوجد أي زر أو إجراء أو نموذج لحذف الحساب داخل أي من التطبيقات الثلاثة.</strong> ويُتَّخذ إجراء إنشاء الحسابات وحذفها من جهة إدارة المدرسة خارج التطبيقات، عبر نظام المدرسة المركزي <strong>ALGHAD-CENTRAL</strong> بواسطة المالك المخوّل. خطوات طلب الحذف موضّحة في <a href="data-deletion.html">صفحة «طلب حذف الحساب والبيانات»</a>.</p>
 
     <h2>3. البيانات التي نعالجها</h2>
 
     <h3>3.1 بيانات مشتركة بين التطبيقات الثلاثة</h3>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>نوع البيانات</th><th>الغرض</th><th>إلزامية؟</th></tr></thead>
       <tbody>
@@ -60,9 +88,11 @@
         <tr><td><strong>كلمة المرور</strong></td><td>تُرسَل مباشرة إلى خدمة Firebase Authentication للتحقق. <strong>لا نحتفظ بها كنص صريح ولا نخزّنها داخل التطبيقات أو قواعد بيانات المدرسة.</strong></td><td>إلزامية</td></tr>
       </tbody>
     </table>
+    </div>
 
     <h3>3.2 البيانات عند استخدام كل تطبيق</h3>
     <p><strong>أ) تطبيق «الغد كركوك» (الطالب/ولي الأمر)</strong> — يتصل بخادم المدرسة عبر اتصال مشفّر، ولا يصل إلى قاعدة البيانات مباشرة:</p>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>البيانات</th><th>الاتجاه</th><th>الغرض</th></tr></thead>
       <tbody>
@@ -73,11 +103,13 @@
         <tr><td>البيانات الأكاديمية المعروضة (الاسم، الصف/الشعبة، الرقم الدراسي، سجل الحضور، المفكرة اليومية، الدرجات، الإشعارات)</td><td>تُستلَم من خادم المدرسة للعرض فقط</td><td>تمكين الطالب/ولي الأمر من متابعة الوضع الدراسي</td></tr>
       </tbody>
     </table>
+    </div>
     <div class="note">
       <strong>ملاحظة مهمة:</strong> بيانات الطالب الأكاديمية والبيانات الطبية المخزَّنة في نظام المدرسة (فصيلة الدم، الحساسية، ملاحظات طبية) إن وُجدت، تُدار أصلًا في سجلات المدرسة الرسمية ولا يتم إدخالها من داخل التطبيق، ويُعرض منها ما يخصّ الحساب المرتبط به فقط.
     </div>
 
     <p><strong>ب) تطبيق «الغد الإداري» (الجهة الإدارية)</strong>:</p>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>البيانات</th><th>الاتجاه</th><th>الغرض</th></tr></thead>
       <tbody>
@@ -89,37 +121,52 @@
         <tr><td>صور سجل السائقين (صورة السائق/المركبة)</td><td><strong>محلية على الجهاز فقط</strong></td><td>سجل داخلي؛ <strong>لا تُرفع إلى أي خادم</strong></td></tr>
       </tbody>
     </table>
+    </div>
 
-    <p><strong>ج) تطبيق «معلمات الغد»</strong> — لا يتصل بخادم المدرسة، ولا يستخدم قاعدة بيانات سحابية:</p>
+    <p><strong>ج) تطبيق «معلمات الغد»</strong> — يستخدم Firebase Authentication لتسجيل الدخول، ويتصل بخادم المدرسة لغرض واحد فقط: <strong>التحقق من أن حساب المعلمة نشط ومصرَّح له بالدخول</strong> قبل عرض أي شاشة من شاشات التطبيق:</p>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>البيانات</th><th>الاتجاه</th><th>الغرض</th></tr></thead>
       <tbody>
-        <tr><td>البريد الإلكتروني وكلمة المرور</td><td>يُرسَل إلى Firebase Authentication</td><td>تسجيل الدخول فقط</td></tr>
-        <tr><td>الخطط والجدول والرسائل والملاحظات والصور الشخصية</td><td><strong>تُخزَّن محليًا على جهاز المستخدم فقط</strong></td><td>تشغيل وظائف التطبيق</td></tr>
+        <tr><td>البريد الإلكتروني وكلمة المرور</td><td>يُرسَلان إلى Firebase Authentication (Google) عبر اتصال مشفَّر</td><td>تسجيل الدخول فقط؛ <strong>كلمة المرور لا تُخزَّن في التطبيق ولا في قواعد بيانات المدرسة</strong></td></tr>
+        <tr><td>رمز المصادقة (Firebase ID token)</td><td>يُرسَل إلى خادم المدرسة عبر HTTPS في ترويسة <code>Authorization: Bearer &lt;token&gt;</code> عند طلب <code>GET /teacher/me</code></td><td>التحقق من هوية الحساب ومن وجود سجل معلمة <strong>نشط</strong> مرتبط به</td></tr>
+        <tr><td>بيانات ملف الحساب المعروضة (الاسم، البريد الإلكتروني، اسم المستخدم، التخصص، ورقم هاتف العمل والمواد/الصفوف المسندة إن كانت مسجّلة في سجل المدرسة، وحالة الحساب)</td><td><strong>تُستلَم</strong> من خادم المدرسة كنتيجة للتحقق</td><td>عرض بيانات الحساب داخل التطبيق</td></tr>
+        <tr><td>الخطط، الجدول، الرسائل، التبليغات، الملاحظات، الإشعارات، صورة الملف الشخصي</td><td><strong>تُخزَّن محليًا على جهاز المستخدم فقط</strong></td><td>تشغيل وظائف التطبيق</td></tr>
+        <tr><td>نسخة محلية مختصرة من بيانات الحساب (الاسم والبريد والتخصص ومسار الصورة)</td><td><strong>تُخزَّن محليًا على الجهاز</strong></td><td>تسريع فتح التطبيق واستعادة الجلسة دون انتظار الشبكة</td></tr>
       </tbody>
     </table>
+    </div>
+    <p><strong>لا يكتب تطبيق «معلمات الغد» أي بيانات إلى خادم المدرسة</strong>: الاتصال الوحيد هو طلب قراءة <code>GET /teacher/me</code> بلا جسم طلب، ولا توجد أي عمليات إنشاء أو تعديل أو حذف، ولا يتيح التطبيق إنشاء حساب من داخله. كذلك <strong>لا يستخدم هذا التطبيق Cloud Firestore ولا خدمة إشعارات السحابة (FCM)</strong>: إشعاراته <strong>محلية بالكامل</strong> على الجهاز (تذكيرات الخطط المبرمَجة محليًا).</p>
+    <div class="note">
+      <strong>ملاحظة:</strong> بيانات ملف الحساب التي يعرضها تطبيق «معلمات الغد» هي بيانات سجل المعلمة نفسه في نظام المدرسة، وتصل إلى التطبيق <strong>نتيجةً لطلب التحقق</strong> <code>GET /teacher/me</code>، ولا يُدخل المستخدم أي بيانات شخصية جديدة داخل التطبيق. ولا يرسل التطبيق إلى خادم المدرسة سوى <strong>رمز المصادقة</strong> في ترويسة الطلب، ويُستخدم ما يستقبله لعرض بيانات الحساب وتشغيل وظائف التطبيق فقط، ولا يُشارَك مع أي جهة أخرى غير مقدّمي الخدمة المذكورين في القسم 5.
+    </div>
 
     <h2>4. أذونات الجهاز</h2>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>الإذن</th><th>التطبيق</th><th>الغرض الفعلي</th></tr></thead>
       <tbody>
         <tr><td><code>POST_NOTIFICATIONS</code></td><td>«الغد كركوك» و«معلمات الغد»</td><td>عرض إشعارات المدرسة</td></tr>
         <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>«معلمات الغد»</td><td>جدولة تذكيرات الخطط في وقتها المحدد (يمكن للمستخدم منعها من إعدادات النظام دون تعطيل التطبيق)</td></tr>
-        <tr><td>اختيار الصور من المعرض</td><td>«الغد الإداري»، «معلمات الغد»</td><td>اختيار صورة باختيار المستخدم الصريح، ومعالجتها محليًا</td></tr>
+        <tr><td>اختيار الصور من المعرض</td><td>«الغد الإداري»، «معلمات الغد»</td><td>اختيار صورة بقرار صريح من المستخدم، وتُعالَج وتُحفظ محليًا على الجهاز</td></tr>
       </tbody>
     </table>
+    </div>
     <p>لا نطلب أي إذن للوصول إلى الموقع الجغرافي، أو جهات الاتصال، أو الرسائل، أو ملفات الجهاز العامة.</p>
 
     <h2>5. مَن يعالج البيانات (مقدّمو الخدمة)</h2>
     <p>نستعين بمقدّمي خدمات تقنيين لمعالجة البيانات <strong>نيابةً عن المدرسة ولأغراض تشغيل الخدمة فقط</strong>، دون بيعها أو استخدامها لأغراض إعلانية:</p>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>المزوّد</th><th>الدور</th><th>البيانات</th></tr></thead>
       <tbody>
         <tr><td><strong>Google Firebase</strong> (Authentication / Cloud Firestore / Cloud Messaging)</td><td>المصادقة، قاعدة بيانات المدرسة، إشعارات المنصة</td><td>الحساب، السجل الدراسي والإداري، رمز الإشعارات</td></tr>
-        <tr><td><strong>Render</strong></td><td>استضافة خادم المدرسة (<span dir="ltr">https://alghad-central-backend.onrender.com</span>)</td><td>الطلبات والبيانات المرسلة من التطبيقات</td></tr>
+        <tr><td><strong>Render</strong></td><td>استضافة خادم المدرسة (<span dir="ltr">https://alghad-central-backend.onrender.com</span>)</td><td>الطلبات والبيانات المرسلة من التطبيقات — وتشمل تطبيق «معلمات الغد»: طلب <code>GET /teacher/me</code> للتحقق من صلاحية الحساب</td></tr>
         <tr><td><strong>Cloudflare R2</strong></td><td>تخزين صور الملف الشخصي والوسائط المدرسية</td><td>الصور فقط عند وجودها</td></tr>
       </tbody>
     </table>
+    </div>
+    <p><strong>ملاحظة خاصة بتطبيق «معلمات الغد»:</strong> من جهة هذا التطبيق يُستخدم من خدمات Google <strong>Firebase Authentication فقط</strong>؛ لا يُستخدم Cloud Firestore ولا Cloud Messaging، ولا تُرسَل بياناته إلى أي مزوّد آخر.</p>
     <p>قد تُعالَج البيانات على خوادم خارج العراق لدى هؤلاء المزوّدين بحسب بنيتهم السحابية.</p>
 
     <h2>6. لا إعلانات ولا تتبّع ولا بيع بيانات</h2>
@@ -127,21 +174,29 @@
       <li>لا تحتوي التطبيقات الثلاثة على أي شبكة إعلانات.</li>
       <li>لا نستخدم أدوات تحليلات (Analytics) أو تتبّع إعلاني، ولا أدوات تقارير أعطال (Crashlytics) أو قياس أداء.</li>
       <li><strong>لا نبيع البيانات الشخصية ولا نشاركها مع أي طرف ثالث لأغراض تجارية أو تسويقية.</strong></li>
+      <li>لا تُنقل البيانات الشخصية إلى أي جهة خارجية أخرى؛ ومقدّمو الخدمة المذكورون في القسم 5 يعالجونها <strong>نيابةً عن المدرسة</strong> ولأغراض تشغيل الخدمة فقط.</li>
     </ul>
 
     <h2>7. بيانات الأطفال</h2>
-    <p>التطبيقات مخصّصة لبيئة تعليمية، وقد تُستخدم حسابات طلاب. ولأن الحسابات تُنشأ من قِبل المدرسة حصريًا ولا يوجد تسجيل ذاتي، فإن المدرسة هي الجهة التي تُدير هذه الحسابات وتحصل على موافقة ولي الأمر وفق أنظمتها الداخلية. لا نجمع بيانات من الأطفال لأغراض تسويقية أو تحليلية إطلاقًا.</p>
+    <p>التطبيقات مخصّصة لبيئة تعليمية، وقد تُستخدم حسابات طلاب. ولأن الحسابات تُنشأ من قِبل المدرسة ولا يوجد تسجيل ذاتي، فإن المدرسة هي الجهة التي تُدير هذه الحسابات وتحصل على موافقة ولي الأمر وفق أنظمتها الداخلية. لا نجمع بيانات من الأطفال لأغراض تسويقية أو تحليلية إطلاقًا.</p>
 
     <h2>8. أمن البيانات</h2>
     <ul>
       <li>جميع الاتصالات تتم عبر <strong>HTTPS/TLS</strong> (لا يوجد أي اتصال غير مشفّر في التطبيقات).</li>
       <li>الوصول إلى البيانات محكوم بقواعد أمنية في قاعدة البيانات وبصلاحيات دورية (دور الطالب/الإداري/المعلمة)، وتُنفَّذ العمليات الإدارية الحسّاسة من جهة الخادم حصريًا.</li>
+      <li><strong>هوية المعلمة تُثبَت من جهة الخادم:</strong> يتحقق خادم المدرسة من رمز المصادقة (Firebase ID token) ومن وجود سجل معلمة <strong>نشط</strong> مرتبط به قبل إرجاع أي بيانات، ولا يعتمد على أي قيمة يُرسلها التطبيق عن نفسه.</li>
       <li>لا تُخزَّن كلمات المرور داخل التطبيقات ولا في سجلاتها.</li>
+      <li>لا تُسجَّل رموز المصادقة (Firebase ID token) في سجلات خادم المدرسة في مسار التحقق من حساب المعلمة؛ وعند حدوث خطأ تُسجَّل حالته ومعرّفات مُقنَّعة (Masked) فقط، دون رمز المصادقة ودون بيانات حساب كاملة.</li>
       <li>الوصول إلى صور الملف الشخصي (إن وُجدت) يتم عبر روابط موقّعة قصيرة الأجل، لا روابط عامة دائمة.</li>
     </ul>
 
     <h2>9. مدة الاحتفاظ</h2>
     <p>نحتفظ بالبيانات للمدة اللازمة لتشغيل الخدمة التعليمية والإدارية، وبما يتماشى مع سجلات المدرسة الرسمية ومتطلبات الجهات التربوية. عند انتهاء العلاقة الدراسية أو الوظيفية يُتخذ إجراء الإيقاف/الحذف بحسب سياسة المدرسة.</p>
+
+    <p><strong>تطبيق «معلمات الغد»:</strong> لا يحفظ التطبيق <strong>رمز المصادقة (Firebase ID token)</strong> في تخزينه الخاص — لا في تخزين الإعدادات المحلي ولا في ملفات التطبيق — بل يطلبه من مكتبة Firebase Authentication عند كل عملية تحقق ويستخدمه في ترويسة الطلب فقط. أما <strong>مكتبة Firebase Authentication نفسها</strong> فتحتفظ بجلسة الدخول اللازمة لاستمرار الجلسة واستعادتها بعد إعادة فتح التطبيق، وهي إدارة داخلية خاصة بالمكتبة وليست تخزينًا أضافه التطبيق، ويمكن إنهاؤها في أي وقت بتسجيل الخروج من التطبيق. ولا يحتفظ خادم المدرسة بالرمز: يتحقق منه عند الطلب ثم لا يخزّنه.</p>
+
+    <p>ويحتفظ خادم المدرسة بسجل حساب المعلمة (الاسم، البريد الإلكتروني، اسم المستخدم، التخصص، وبيانات الإسناد) لأغراض إدارة الحساب المدرسي فقط. وعند الموافقة على طلب حذف حساب معلمة — بعد التحقق من صفة مقدّم الطلب — يُنفَّذ الحذف من جهة إدارة المدرسة عبر نظامها المركزي <strong>ALGHAD-CENTRAL</strong> بواسطة المالك المخوّل، ويشمل: إزالة حساب المصادقة (إن وُجد)، وسجل المعلمة، وروابط إسنادها للصفوف/الشعب، وصورة ملفها الشخصي المخزَّنة على خدمة التخزين إن وُجدت. ولا يوجد أي زر أو إجراء أو نموذج لتنفيذ هذا الحذف داخل تطبيق «معلمات الغد». خطوات الطلب موضّحة في <a href="data-deletion.html">صفحة «طلب حذف الحساب والبيانات»</a>.</p>
+
     <p>عند تنفيذ طلب حذف حساب الطالب — بعد التحقق من صفة مقدّم الطلب — تُحذف <strong>جميع</strong> البيانات المرتبطة بالطالب نهائيًا، دون الاحتفاظ بأي سجلات شخصية أو نسخ مجهولة الهوية من بياناته، وتشمل:</p>
     <ul>
       <li>بيانات تسجيل الدخول (حساب المصادقة)،</li>
@@ -175,10 +230,10 @@
   </main>
 
   <!-- ===================== ENGLISH ===================== -->
-  <section class="card en" id="en" style="margin-top:20px">
+  <section class="card en" id="en" lang="en" style="margin-top:20px">
     <p class="doc-title">Privacy Policy — Alghad Private School (Kirkuk) Applications</p>
     <p class="meta">
-      <strong>Last updated:</strong> 2026-10-20<br>
+      <strong>Last updated:</strong> 2026-10-24<br>
       <strong>Data controller:</strong> Alghad Private School — Kirkuk, Republic of Iraq.
     </p>
     <div class="contact">
@@ -189,6 +244,7 @@
 
     <h2>1. Scope</h2>
     <p>This policy applies to the following three applications. They are internal applications of Alghad Private School — Kirkuk, intended for use only by the school's students, their parents/guardians, and the school's administrative and teaching staff:</p>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>Application</th><th>Package ID (<code>applicationId</code>)</th><th>Intended users</th></tr></thead>
       <tbody>
@@ -197,15 +253,17 @@
         <tr><td><strong>Alghad Teachers</strong></td><td><code>com.alghad.kirkuk.alghad_teachers</code></td><td>Teachers</td></tr>
       </tbody>
     </table>
+    </div>
     <p>By using any of these applications, you confirm that you have reviewed this policy.</p>
 
     <h2>2. General principle: no self sign-up and no self deletion</h2>
-    <p><strong>None of the three applications allows creating an account from within the app.</strong> All accounts are created in advance by the school administration through the school's central system <strong>ALGHAD-CENTRAL</strong>, exclusively by the authorized owner, and the login credentials are handed to the relevant person. There is no sign-up form and no user-created accounts.</p>
-    <p><strong>The student, admin, and teachers applications contain no permission to create or delete accounts.</strong> Creating and deleting student accounts is performed exclusively from the <strong>ALGHAD-CENTRAL</strong> application by the authorized owner; there is no account-deletion button or action inside any of the three applications. The deletion request steps are described on the <a href="data-deletion.html#en">"Account &amp; Data Deletion Request"</a> page.</p>
+    <p><strong>None of the three applications allows creating an account from within the app.</strong> Accounts are created in advance by the school administration through the school's central system <strong>ALGHAD-CENTRAL</strong>, by the authorized owner, and the login credentials are handed to the relevant person. There is no sign-up form and no user-created accounts.</p>
+    <p><strong>The student, admin, and teachers applications contain no permission to create or delete accounts, and there is no account-deletion button, action, or form inside any of the three applications.</strong> Creating and deleting accounts is handled by the school administration outside the applications, through the school's central system <strong>ALGHAD-CENTRAL</strong>, by the authorized owner. The deletion request steps are described on the <a href="data-deletion.html#en">"Account &amp; Data Deletion Request"</a> page.</p>
 
     <h2>3. Data we process</h2>
 
     <h3>3.1 Data common to the three applications</h3>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>Data type</th><th>Purpose</th><th>Required?</th></tr></thead>
       <tbody>
@@ -214,9 +272,11 @@
         <tr><td><strong>Password</strong></td><td>Sent directly to Firebase Authentication for verification. <strong>We do not retain it in plain text and do not store it in the applications or the school's databases.</strong></td><td>Required</td></tr>
       </tbody>
     </table>
+    </div>
 
     <h3>3.2 Data per application</h3>
     <p><strong>a) "Alghad Kirkuk" (student/guardian)</strong> — connects to the school server over an encrypted connection and does not access the database directly:</p>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>Data</th><th>Direction</th><th>Purpose</th></tr></thead>
       <tbody>
@@ -227,11 +287,13 @@
         <tr><td>Displayed academic data (name, class/section, student number, attendance record, daily diary, grades, notifications)</td><td>Received from the school server for display only</td><td>Enabling the student/guardian to follow academic progress</td></tr>
       </tbody>
     </table>
+    </div>
     <div class="note">
       <strong>Important note:</strong> Student academic data and medical data stored in the school system (blood type, allergies, medical notes), if any, are maintained in the school's official records and are not entered from within the application; only the data related to the linked account is displayed.
     </div>
 
     <p><strong>b) "Alghad Admin" (administrative side)</strong>:</p>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>Data</th><th>Direction</th><th>Purpose</th></tr></thead>
       <tbody>
@@ -243,37 +305,52 @@
         <tr><td>Driver registry images (driver/vehicle photo)</td><td><strong>Local to the device only</strong></td><td>Internal registry; <strong>not uploaded to any server</strong></td></tr>
       </tbody>
     </table>
+    </div>
 
-    <p><strong>c) "Alghad Teachers"</strong> — does not connect to the school server and does not use a cloud database:</p>
+    <p><strong>c) "Alghad Teachers"</strong> — uses Firebase Authentication to sign in, and connects to the school server for one purpose only: <strong>verifying that the teacher's account is active and authorized to sign in</strong> before any app screen is shown:</p>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>Data</th><th>Direction</th><th>Purpose</th></tr></thead>
       <tbody>
-        <tr><td>Email and password</td><td>Sent to Firebase Authentication</td><td>Sign-in only</td></tr>
-        <tr><td>Plans, schedule, messages, notes, and personal images</td><td><strong>Stored locally on the user's device only</strong></td><td>Operating the application's features</td></tr>
+        <tr><td>Email and password</td><td>Sent to Firebase Authentication (Google) over an encrypted connection</td><td>Sign-in only; <strong>the password is not stored in the app or in the school's databases</strong></td></tr>
+        <tr><td>Authentication token (Firebase ID token)</td><td>Sent to the school server over HTTPS in the <code>Authorization: Bearer &lt;token&gt;</code> header for the <code>GET /teacher/me</code> request</td><td>Verifying the account's identity and that an <strong>active</strong> teacher record is linked to it</td></tr>
+        <tr><td>Displayed account profile data (name, email, username, specialization, and work phone number and assigned subjects/classes where recorded in the school record, and account status)</td><td><strong>Received</strong> from the school server as the result of the verification</td><td>Displaying the account data inside the app</td></tr>
+        <tr><td>Plans, schedule, messages, notifications, notes, and profile image</td><td><strong>Stored locally on the user's device only</strong></td><td>Operating the application's features</td></tr>
+        <tr><td>A local abbreviated copy of the account data (name, email, specialization, image path)</td><td><strong>Stored locally on the device</strong></td><td>Faster app startup and session restoration without waiting for the network</td></tr>
       </tbody>
     </table>
+    </div>
+    <p><strong>"Alghad Teachers" writes no data to the school server</strong>: the only connection is a read request <code>GET /teacher/me</code> with no request body; there are no create, update, or delete operations, and the app does not allow creating an account from within it. This app also <strong>does not use Cloud Firestore or Cloud Messaging (FCM)</strong>: its notifications are <strong>entirely local</strong> on the device (locally scheduled plan reminders).</p>
+    <div class="note">
+      <strong>Note:</strong> the account profile data displayed by the "Alghad Teachers" app is the teacher's own record in the school system, delivered to the app <strong>as the result of the verification request</strong> <code>GET /teacher/me</code>; the user does not enter any new personal data inside the app. The app sends nothing to the school server except the <strong>authentication token</strong> in the request header, and everything it receives is used only to display the account data and operate the app's features and is not shared with any party other than the service providers listed in section 5.
+    </div>
 
     <h2>4. Device permissions</h2>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>Permission</th><th>Application</th><th>Actual purpose</th></tr></thead>
       <tbody>
         <tr><td><code>POST_NOTIFICATIONS</code></td><td>"Alghad Kirkuk" and "Alghad Teachers"</td><td>Displaying school notifications</td></tr>
         <tr><td><code>SCHEDULE_EXACT_ALARM</code></td><td>"Alghad Teachers"</td><td>Scheduling plan reminders at their specified time (the user may disable it from system settings without disabling the app)</td></tr>
-        <tr><td>Selecting images from the gallery</td><td>"Alghad Admin", "Alghad Teachers"</td><td>Selecting an image with the user's explicit choice, processed locally</td></tr>
+        <tr><td>Selecting images from the gallery</td><td>"Alghad Admin", "Alghad Teachers"</td><td>Selecting an image by the user's explicit choice, processed and stored locally on the device</td></tr>
       </tbody>
     </table>
+    </div>
     <p>We do not request any permission to access location, contacts, messages, or general device files.</p>
 
     <h2>5. Who processes the data (service providers)</h2>
     <p>We use technical service providers to process data <strong>on the school's behalf and only for operating the service</strong>, without selling it or using it for advertising:</p>
+    <div class="table-wrap">
     <table>
       <thead><tr><th>Provider</th><th>Role</th><th>Data</th></tr></thead>
       <tbody>
         <tr><td><strong>Google Firebase</strong> (Authentication / Cloud Firestore / Cloud Messaging)</td><td>Authentication, the school's database, platform notifications</td><td>Account, academic and administrative record, notification token</td></tr>
-        <tr><td><strong>Render</strong></td><td>Hosting the school server (<span dir="ltr">https://alghad-central-backend.onrender.com</span>)</td><td>Requests and data sent from the applications</td></tr>
+        <tr><td><strong>Render</strong></td><td>Hosting the school server (<span dir="ltr">https://alghad-central-backend.onrender.com</span>)</td><td>Requests and data sent from the applications — including the "Alghad Teachers" app: the <code>GET /teacher/me</code> request to verify the account</td></tr>
         <tr><td><strong>Cloudflare R2</strong></td><td>Storing profile images and school media</td><td>Images only, where present</td></tr>
       </tbody>
     </table>
+    </div>
+    <p><strong>Note specific to the "Alghad Teachers" app:</strong> from this app's side, of Google's services only <strong>Firebase Authentication</strong> is used; neither Cloud Firestore nor Cloud Messaging is used, and none of its data is sent to any other provider.</p>
     <p>Data may be processed on servers outside Iraq by these providers according to their cloud architecture.</p>
 
     <h2>6. No ads, no tracking, no data selling</h2>
@@ -281,21 +358,29 @@
       <li>The three applications contain no advertising network.</li>
       <li>We do not use analytics or advertising tracking tools, nor crash-reporting (Crashlytics) or performance-measurement tools.</li>
       <li><strong>We do not sell personal data or share it with any third party for commercial or marketing purposes.</strong></li>
+      <li>Personal data is not transferred to any other third party; the service providers listed in section 5 process it <strong>on the school's behalf</strong> and only to operate the service.</li>
     </ul>
 
     <h2>7. Children's data</h2>
-    <p>The applications serve an educational environment and student accounts may be used. Because accounts are created exclusively by the school and there is no self sign-up, the school is the entity that manages these accounts and obtains guardian consent in accordance with its internal regulations. We do not collect children's data for marketing or analytical purposes whatsoever.</p>
+    <p>The applications serve an educational environment and student accounts may be used. Because accounts are created by the school and there is no self sign-up, the school is the entity that manages these accounts and obtains guardian consent in accordance with its internal regulations. We do not collect children's data for marketing or analytical purposes whatsoever.</p>
 
     <h2>8. Data security</h2>
     <ul>
       <li>All connections use <strong>HTTPS/TLS</strong> (there is no unencrypted connection in the applications).</li>
       <li>Data access is governed by database security rules and role-based permissions (student/admin/teacher roles), and sensitive administrative operations are performed exclusively server-side.</li>
+      <li><strong>Teacher identity is established server-side:</strong> the school server verifies the Firebase ID token and that an <strong>active</strong> teacher record is linked to it before returning any data, and never relies on any value that the app sends about itself.</li>
       <li>Passwords are not stored within the applications or their logs.</li>
+      <li>Authentication tokens (Firebase ID tokens) are not written to the school server's logs along the teacher-verification path; on error, only the error state and masked identifiers are logged, with no authentication token and no full account data.</li>
       <li>Access to profile images (where present) is via short-lived signed URLs, not permanent public links.</li>
     </ul>
 
     <h2>9. Retention period</h2>
     <p>We retain data for the period necessary to operate the educational and administrative service, in line with the school's official records and the requirements of educational authorities. When the academic or employment relationship ends, suspension/deletion is carried out according to school policy.</p>
+
+    <p><strong>"Alghad Teachers" app:</strong> the app does not store the <strong>authentication token (Firebase ID token)</strong> in its own storage — neither in the local preferences store nor in the app's files — but requests it from Firebase Authentication for each verification and uses it only in the request header. <strong>Firebase Authentication itself</strong>, however, maintains the sign-in session needed to keep and restore the session after the app is reopened; that is the library's own internal handling and not storage added by the app, and it can be ended at any time by signing out of the app. The school server does not retain the token either: it verifies it per request and does not store it.</p>
+
+    <p>The school server retains the teacher account record (name, email, username, specialization, and assignment data) solely for school account administration. Upon approval of a teacher account deletion request — after verifying the requester's capacity — the deletion is carried out by the school administration through its central system <strong>ALGHAD-CENTRAL</strong> by the authorized owner, covering: removal of the authentication account (where present), the teacher record, the teacher's class/section assignment links, and the profile image stored on the storage service, if any. There is no button, action, or form inside the "Alghad Teachers" app to perform this deletion. The request steps are described on the <a href="data-deletion.html#en">"Account &amp; Data Deletion Request"</a> page.</p>
+
     <p>Upon executing a student account deletion request — after verifying the requester's capacity — <strong>all</strong> data related to the student is permanently deleted, with no personal records or anonymized copies retained, including:</p>
     <ul>
       <li>login data (the authentication account),</li>
